@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.PostConstruct;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -34,7 +35,15 @@ class DataLoader {
 
 	@PostConstruct
 	private void loadData() {
-		coffeeRepository.saveAll(List.of(
+		//java 9
+		/*coffeeRepository.saveAll(List.of(
+				new Coffee("Café Cereza"),
+				new Coffee("Café Ganador"),
+				new Coffee("Café Lareño"),
+				new Coffee("Café Três Pontas")
+		));*/
+		//java 8
+		coffeeRepository.saveAll(Arrays.asList(
 				new Coffee("Café Cereza"),
 				new Coffee("Café Ganador"),
 				new Coffee("Café Lareño"),
