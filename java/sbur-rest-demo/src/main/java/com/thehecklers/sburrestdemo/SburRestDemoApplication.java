@@ -156,6 +156,7 @@ class Droid {
 	}
 }
 
+//@Component 若不用 @ConfigurationPropertiesScan  似乎可改用 @Component
 @ConfigurationProperties(prefix = "greeting")
 class Greeting {
 	private String name;
