@@ -1,6 +1,5 @@
 package com.thehecklers.sburrestdemo;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -16,7 +15,6 @@ import javax.annotation.PostConstruct;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -157,7 +155,7 @@ class Droid {
 }
 
 //@Component 若不用 @ConfigurationPropertiesScan  似乎可改用 @Component
-@ConfigurationProperties(prefix = "greeting")
+/*@ConfigurationProperties(prefix = "greeting")
 class Greeting {
 	private String name;
 	private String coffee;
@@ -177,7 +175,7 @@ class Greeting {
 	public void setCoffee(String coffee) {
 		this.coffee = coffee;
 	}
-}
+}*/
 
 interface CoffeeRepository extends CrudRepository<Coffee, String> {}
 
